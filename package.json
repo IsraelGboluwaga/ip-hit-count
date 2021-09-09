@@ -1,0 +1,53 @@
+{
+  "name": "ip-hit-count",
+  "version": "0.0.1",
+  "description": "Simple library to check the number of IP hits in a defined timeframe",
+  "scripts": {
+    "build": "NODE_ENV=production tsc --project tsconfig.json",
+    "lint:fix": "prettier --write '*/**/*.{js,ts,tsx,jsx}' && eslint --quiet --cache --fix '*/**/*.{js,ts,tsx}'",
+    "coverage:html": "nyc --reporter=html yarn run test",
+    "coverage": "nyc yarn run test",
+    "test": "NODE_ENV=test TS_NODE_FILES=true NODE_PATH=. mocha --exit --require ts-node/register --watch false 'test/**/*.spec.ts'",
+    "test:watch": "mocha"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@types/ioredis": "^4.27.2",
+    "@types/lodash": "^4.14.168",
+    "@types/moment-timezone": "^0.5.30",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "@typescript-eslint/typescript-estree": "^4.22.0",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-no-only-tests": "^2.5.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "ioredis": "^4.27.9",
+    "lodash": "^4.17.21",
+    "moment-timezone": "^0.5.33",
+    "typescript": "4.2.4"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.16",
+    "@types/mocha": "^8.2.2",
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "nyc": "^15.1.0",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1"
+  },
+  "keywords": [
+    "ip-count",
+    "ip-hit-count"
+  ],
+  "author": "Israel Arunah <israel.arunah@gmail.com>",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.22.5"
+  }
+}
